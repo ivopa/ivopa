@@ -1,0 +1,237 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2761
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Here are some discrete Easter eggs you can add to your flat HTML + CSS website that reference 2000s to 2010s web building practices, while keeping in mind the state of the network in 2024:\
+\
+### 1. ASCII Art in Comments\
+Include some classic ASCII art in your HTML comments. Users who inspect your page's source code will get a nostalgic surprise.\
+\
+```html\
+<!--\
+      .-""""-.\
+     / -   -  \\\
+    |  .-. .-  |\
+    |  \\o| |o  |\
+    \\     ^    /\
+     '.  )--' .'\
+       '-...-'\
+   Hello, Inspector!\
+-->\
+```\
+\
+### 2. Hidden Message in CSS\
+Hide a fun message or graphic in your CSS file using a base64 encoded image.\
+\
+```css\
+/* \
+Background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA...);\
+Hey, you found me! This is an Easter egg!\
+*/\
+```\
+\
+### 3. Old School Under Construction GIF\
+Include a hidden "Under Construction" gif, a hallmark of early 2000s websites.\
+\
+```html\
+<div class="easter-egg">\
+  <img src="under_construction.gif" alt="Under Construction">\
+</div>\
+\
+<style>\
+  .easter-egg \{\
+    display: none;\
+  \}\
+  body:hover .easter-egg \{\
+    display: block;\
+    position: fixed;\
+    bottom: 10px;\
+    right: 10px;\
+  \}\
+</style>\
+```\
+\
+### 4. Blinking Text\
+Add some nostalgic blinking text using CSS animations, reminiscent of early web design.\
+\
+```html\
+<div class="blinking-text">You've found an Easter egg!</div>\
+\
+<style>\
+  .blinking-text \{\
+    color: #f00;\
+    animation: blink 1s infinite;\
+  \}\
+\
+  @keyframes blink \{\
+    50% \{\
+      opacity: 0;\
+    \}\
+  \}\
+</style>\
+```\
+\
+### 5. Hidden Page\
+Create a hidden page accessible only via a specific URL path. This can contain a throwback to old design trends.\
+\
+```html\
+<!-- Save this as hidden.html -->\
+<!DOCTYPE html>\
+<html lang="en">\
+<head>\
+    <meta charset="UTF-8">\
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">\
+    <title>Hidden Page</title>\
+    <style>\
+        body \{\
+            background-color: #000;\
+            color: #0f0;\
+            font-family: 'Courier New', Courier, monospace;\
+        \}\
+        marquee \{\
+            width: 100%;\
+            behavior: scroll;\
+            direction: left;\
+        \}\
+    </style>\
+</head>\
+<body>\
+    <marquee>Welcome to the secret page!</marquee>\
+    <p>This is a hidden gem just for you. Enjoy!</p>\
+</body>\
+</html>\
+```\
+\
+### 6. Old-School Scrolling Text\
+Use the `<marquee>` tag to create a scrolling text effect, which was popular in early web design.\
+\
+```html\
+<div class="marquee-container">\
+  <marquee behavior="scroll" direction="left">Welcome to my secret Easter egg!</marquee>\
+</div>\
+\
+<style>\
+  .marquee-container \{\
+    width: 100%;\
+    background: #f0f0f0;\
+    color: #333;\
+    font-family: 'Comic Sans MS', cursive, sans-serif;\
+    font-size: 1.2em;\
+    padding: 10px;\
+    border: 2px solid #ccc;\
+    position: fixed;\
+    bottom: 0;\
+  \}\
+</style>\
+```\
+\
+### 7. Rotating Text with CSS\
+Create rotating text using CSS, mimicking some of the quirky designs from the past.\
+\
+```html\
+<div class="rotating-text">Spinning Easter egg!</div>\
+\
+<style>\
+  .rotating-text \{\
+    display: inline-block;\
+    animation: rotate 5s linear infinite;\
+    font-size: 2em;\
+    color: #00f;\
+  \}\
+\
+  @keyframes rotate \{\
+    0% \{\
+      transform: rotate(0deg);\
+    \}\
+    100% \{\
+      transform: rotate(360deg);\
+    \}\
+  \}\
+</style>\
+```\
+\
+### 8. Text Adventure Game\
+Create a simple text adventure game or a text-based story hidden in the site.\
+\
+```html\
+<div id="adventure-game" class="hidden">\
+  <p>Welcome to the adventure! Type 'start' to begin.</p>\
+  <input type="text" id="command-input">\
+</div>\
+\
+<style>\
+  #adventure-game \{\
+    display: none;\
+    background: #111;\
+    color: #0f0;\
+    font-family: 'Courier New', Courier, monospace;\
+    padding: 20px;\
+    border: 2px solid #0f0;\
+  \}\
+  .hidden \{\
+    display: none;\
+  \}\
+</style>\
+\
+<script>\
+  document.addEventListener('DOMContentLoaded', function() \{\
+    document.getElementById('command-input').addEventListener('keypress', function(e) \{\
+      if (e.key === 'Enter') \{\
+        let input = e.target.value.toLowerCase();\
+        if (input === 'start') \{\
+          alert('The adventure begins!');\
+        \} else \{\
+          alert('Unknown command');\
+        \}\
+        e.target.value = '';\
+      \}\
+    \});\
+  \});\
+</script>\
+```\
+\
+### 9. Hover Effects\
+Add hover effects to elements that reveal hidden messages or change the appearance drastically, evoking the playful styles of the 2000s.\
+\
+```html\
+<p class="hover-reveal">Hover over me to reveal a secret!</p>\
+\
+<style>\
+  .hover-reveal::after \{\
+    content: " Hello from the past!";\
+    visibility: hidden;\
+    opacity: 0;\
+    transition: visibility 0s, opacity 0.5s linear;\
+  \}\
+\
+  .hover-reveal:hover::after \{\
+    visibility: visible;\
+    opacity: 1;\
+  \}\
+</style>\
+```\
+\
+### 10. Retro Fonts and Styles\
+Use retro fonts and styles that were popular in the 2000s.\
+\
+```html\
+<link href="https://fonts.googleapis.com/css2?family=Comic+Sans+MS&display=swap" rel="stylesheet">\
+\
+<div class="retro-style">This is a hidden gem with a retro style!</div>\
+\
+<style>\
+  .retro-style \{\
+    font-family: 'Comic Sans MS', cursive, sans-serif;\
+    color: #ff4500;\
+    text-align: center;\
+    padding: 20px;\
+    border: 2px solid #ff4500;\
+    margin: 20px;\
+  \}\
+</style>\
+```\
+\
+By adding these Easter eggs, you can give visitors a delightful experience that references the nostalgic elements of web design from the 2000s to 2010s.}
